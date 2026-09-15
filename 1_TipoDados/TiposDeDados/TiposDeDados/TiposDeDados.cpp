@@ -2,16 +2,18 @@
 //
 
 #include <iostream>
+#include <climits>
 using namespace std;
 
 int main()
 {
-	cout << "Estrutura de Dados - Fatec (2026/1)" << endl;
+	cout << "Estrutura de Dados - Fatec (2026/2)" << endl;
+	cout << "*Modificado por Eduardo C. Lima e Yoriana Handy*" << endl;
 
-	
+
 	cout << "Tipos Numericos\n";
 	cout << "===============\n";
-	
+
 	int i = 10;
 	short s = 18;
 	long l = 200000;
@@ -66,14 +68,69 @@ int main()
 	cin >> idade;
 	dias = idade * 365;
 	horas = dias * 24;
-	minutos = horas  * 60;
+	minutos = horas * 60;
 	cout << "Sua idade em dias e: " << dias << endl;
 	cout << "Sua idade em horas e: " << horas << endl;
 	cout << "Sua idade em minutos e: " << minutos << endl;
 
-	cout << "Qualquer tecla para sair...";
+	cout << "Qualquer tecla para sair...\n";
 	system("pause"); // somente no Windows
+	system("cls");
 
+	cout << "Exercicio 1\n";
+	cout << "===========\n";
 
+	cout << "int  max = " << INT_MAX << "\n";
+	cout << "int  min = " << INT_MIN << "\n";
+	cout << "short max = " << SHRT_MAX << "\n";
+
+	cout << "int max + 1 = " << INT_MAX + 1 << endl;
+
+	system("pause");
+	system("cls");
+
+	cout << "Exercicio 2\n";
+	cout << "===========\n";
+
+	double celsius = 0;
+	cout << "Digite uma temperatura em Celsius: \n";
+	cin >> celsius;
+	double farenheit = celsius * 1.8 + 32;
+	double kelvin = celsius + 273.15;
+	cout << celsius << " graus Celsius = " << farenheit << " graus Farenheit\n";
+	cout << celsius << " graus Celsius = " << kelvin << " graus Kelvin\n";
+	system("pause");
+	system("cls");
+
+	cout << "Exercicio 3\n";
+	cout << "===========\n";
+
+	cout << "Digite uma quantidade de segundos: \n";
+	long seconds = 0;
+	cin >> seconds;
+	long secRemaining = seconds % 60;
+	cout << "Segundos restantes: " << secRemaining << endl;
+	long minutes = seconds / 60;
+	cout << minutes << " minutos;\n";
+	long hours = minutes / 60;
+	cout << hours << " horas;\n";
+	long days = hours / 24;
+	cout << days << " dias.\n";
+	system("pause");
+	system("cls");
+
+	cout << "Exercicio 4\n";
+	cout << "===========\n";
+
+	//a partir daq vou comentar pra ficar mais facil de entender o ponteiro
+
+	int valor = 67; // declaro a variavel atribuindo um valor inicial pra ela
+	cout << "Valor da variavel: " << valor << endl; // exibo a variavel que eu declarei
+	cout << "Endereco da variavel: " << &valor << endl; // exibo o endereço de memoria da variavel
+	int* ponteiroValor = &valor; // crio um ponteiro apontando pro endereço da variavel
+	*ponteiroValor = 2112; // atraves do ponteiro criado na linha acima, atribuo um novo valor a variavel (RUSH REFERENCE)
+	cout << "Novo valor da variavel: " << valor << endl; // exibo a variavel novamente após ter seu valor alterado pelo ponteiro :)
+	system("pause");
+	system("cls");
 }
 
