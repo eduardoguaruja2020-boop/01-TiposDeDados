@@ -83,6 +83,7 @@ int main()
 	cout << "int  max = " << INT_MAX << "\n";
 	cout << "int  min = " << INT_MIN << "\n";
 	cout << "short max = " << SHRT_MAX << "\n";
+	cout << "short min = " << SHRT_MIN << "\n";
 
 	cout << "int max + 1 = " << INT_MAX + 1 << endl;
 
